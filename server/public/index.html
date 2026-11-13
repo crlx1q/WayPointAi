@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WayPoint AI — ИИ-планировщик путешествий</title>
+  <meta name="description" content="Фото локации или запрос в чат — ИИ генерирует поездку, маршруты и метки на карте. Расписывает отдых по часам: где поспать, поесть, что посмотреть.">
+  <meta property="og:title" content="WayPoint AI — путешествия, спланированные за один клик">
+  <meta property="og:description" content="Чат-ассистент, интерактивная карта и почасовой таймлайн — всё в одном приложении.">
+  <meta property="og:image" content="/assets/screen-home.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,400..700,0..1" rel="stylesheet">
+  <link rel="stylesheet" href="/css/landing.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23007AFF'/><stop offset='1' stop-color='%2300C2BB'/></linearGradient></defs><rect rx='24' width='100' height='100' fill='url(%23g)'/><path d='M50 22c-11 0-20 9-20 20 0 15 20 36 20 36s20-21 20-36c0-11-9-20-20-20zm0 27a7 7 0 110-14 7 7 0 010 14z' fill='white'/></svg>">
+</head>
+<body>
+  <!-- Навигация -->
+  <header class="nav glass">
+    <div class="nav-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark"><span class="material-symbols-rounded">distance</span></span>
+        <span class="logo-text">WayPoint <em>AI</em></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Возможности</a>
+        <a href="#how">Как это работает</a>
+        <a href="#screens">Экраны</a>
+        <a href="#pricing">Тарифы</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+          <span class="material-symbols-rounded icon-sun">light_mode</span>
+          <span class="material-symbols-rounded icon-moon">dark_mode</span>
+        </button>
+        <a class="btn btn-primary btn-sm" href="#download">
+          <span class="material-symbols-rounded">download</span>Скачать
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-teal"></div>
+        <div class="grid-lines"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="chip chip-ai">
+            <span class="material-symbols-rounded">auto_awesome</span>
+            Работает на Gemini AI
+          </div>
+          <h1>Путешествие мечты — <span class="grad-text">за один клик</span></h1>
+          <p class="lead">Фото локации или запрос в чат — и ИИ генерирует поездку: маршруты, метки на карте и отдых, расписанный по часам. Где поспать, где поесть, что посмотреть.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#download">
+              <span class="material-symbols-rounded">smartphone</span>
+              Скачать приложение
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how">
+              <span class="material-symbols-rounded">play_circle</span>
+              Как это работает
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div><b>16 дней</b><span>прогноз погоды</span></div>
+            <div class="divider"></div>
+            <div><b>Реальные</b><span>фото и отели</span></div>
+            <div class="divider"></div>
+            <div><b>1 экран</b><span>чат + карта + план</span></div>
+          </div>
+        </div>
+        <div class="hero-phone reveal reveal-delay">
+          <div class="phone-frame float-anim">
+            <img src="/assets/screen-home.png" alt="Главный экран WayPoint AI" loading="eager">
+          </div>
+          <div class="hero-card glass hero-card-1">
+            <span class="material-symbols-rounded card-ic teal">wb_sunny</span>
+            <div><b>22°C · Ясно</b><span>Боровое, сегодня</span></div>
+          </div>
+          <div class="hero-card glass hero-card-2">
+            <span class="material-symbols-rounded card-ic blue">route</span>
+            <div><b>Маршрут готов</b><span>3 дня · 14 точек</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento возможности -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip"><span class="material-symbols-rounded">grid_view</span>Возможности</div>
+          <h2>Всё для поездки — <span class="grad-text">в одном месте</span></h2>
+          <p>Люди устали от шаблонных туров. WayPoint AI собирает уникальный маршрут под ваши интересы из актуальных данных.</p>
+        </div>
+        <div class="bento">
+          <article class="bento-card bento-wide reveal">
+            <div class="bento-icon"><span class="material-symbols-rounded">forum</span></div>
+            <h3>ИИ-агент, который спрашивает как человек</h3>
+            <p>Пара уточнений — куда, на сколько, что любите — и ассистент предлагает тур. Приняли? Через минуту готова поездка, расписанная по часам.</p>
+            <div class="bento-chat">
+              <div class="msg msg-ai">Куда бы вы хотели отправиться и на сколько дней?</div>
+              <div class="msg msg-user">В Боровое на 3 дня</div>
+              <div class="msg msg-ai typing"><i></i><i></i><i></i></div>
+            </div>
+          </article>
+          <article class="bento-card reveal">
+            <div class="bento-icon teal"><span class="material-symbols-rounded">photo_camera</span></div>
+            <h3>Поиск по фото</h3>
+            <p>Пришлите фото горы или озера — ИИ распознает локацию и построит тур именно туда.</p>
+          </article>
+          <article class="bento-card reveal">
+            <div class="bento-icon orange"><span class="material-symbols-rounded">map</span></div>
+            <h3>Живая карта</h3>
+            <p>Метки «Еда», «Сон», «Развлечения», маршрут дня и переход в Google Maps одним тапом.</p>
+          </article>
+          <article class="bento-card reveal">
+            <div class="bento-icon"><span class="material-symbols-rounded">schedule</span></div>
+            <h3>Почасовой таймлайн</h3>
+            <p>Завтрак в 09:00, поход к «Спящему рыцарю» в 11:00 — план на каждый день, без хаоса.</p>
+          </article>
+          <article class="bento-card reveal">
+            <div class="bento-icon teal"><span class="material-symbols-rounded">partly_cloudy_day</span></div>
+            <h3>Актуальные данные</h3>
+            <p>Погода, звёзды отелей, реальные фотографии мест — всё подтягивается автоматически.</p>
+          </article>
+          <article class="bento-card reveal">
+            <div class="bento-icon orange"><span class="material-symbols-rounded">dark_mode</span></div>
+            <h3>Светлая и тёмная темы</h3>
+            <p>Премиальный минимализм с «воздухом» — днём и ночью планировать одинаково приятно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip"><span class="material-symbols-rounded">magic_button</span>Как это работает</div>
+          <h2>От идеи до маршрута — <span class="grad-text">3 шага</span></h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <div class="step-icon"><span class="material-symbols-rounded">chat_bubble</span></div>
+            <h3>Расскажите или покажите</h3>
+            <p>Напишите «В Боровое на 3 дня» или пришлите фото локации — ассистент уточнит детали.</p>
+          </div>
+          <div class="step-arrow reveal"><span class="material-symbols-rounded">east</span></div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <div class="step-icon"><span class="material-symbols-rounded">travel_explore</span></div>
+            <h3>ИИ ищет реальные места</h3>
+            <p>Отели со звёздами, кафе, смотровые, прогноз погоды и живые фото — из открытых актуальных источников.</p>
+          </div>
+          <div class="step-arrow reveal"><span class="material-symbols-rounded">east</span></div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <div class="step-icon"><span class="material-symbols-rounded">beenhere</span></div>
+            <h3>Принимаете тур</h3>
+            <p>Поездка по часам, маршруты на карте и кнопка «Открыть в Google Maps» — можно ехать.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Экраны -->
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip"><span class="material-symbols-rounded">smartphone</span>Экраны</div>
+          <h2>Дизайн, который <span class="grad-text">не мешает мечтать</span></h2>
+          <p>Мягкие закругления, обилие воздуха и стеклянные панели — когнитивная нагрузка стремится к нулю.</p>
+        </div>
+        <div class="screens-row">
+          <figure class="screen-card reveal"><img src="/assets/screen-home.png" alt="Главный экран" loading="lazy"><figcaption>Главная и рекомендации ИИ</figcaption></figure>
+          <figure class="screen-card reveal"><img src="/assets/screen-chat.png" alt="Чат с ИИ" loading="lazy"><figcaption>Чат с ИИ-ассистентом</figcaption></figure>
+          <figure class="screen-card reveal"><img src="/assets/screen-map.png" alt="Карта маршрута" loading="lazy"><figcaption>Карта с метками и маршрутом</figcaption></figure>
+          <figure class="screen-card reveal"><img src="/assets/screen-day.png" alt="План дня" loading="lazy"><figcaption>Почасовой план дня</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="chip"><span class="material-symbols-rounded">workspace_premium</span>Тарифы</div>
+          <h2>Начните <span class="grad-text">бесплатно</span></h2>
+        </div>
+        <div class="pricing">
+          <div class="price-card reveal">
+            <h3>Базовый</h3>
+            <div class="price">0 ₸<span>/мес</span></div>
+            <ul>
+              <li><span class="material-symbols-rounded">check_circle</span>3 ИИ-поездки в месяц</li>
+              <li><span class="material-symbols-rounded">check_circle</span>Карта и почасовой план</li>
+              <li><span class="material-symbols-rounded">check_circle</span>Погода и фото мест</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Скачать</a>
+          </div>
+          <div class="price-card price-featured reveal">
+            <div class="price-badge">Популярный</div>
+            <h3>WayPoint Pro</h3>
+            <div class="price">$4<span>/мес</span></div>
+            <ul>
+              <li><span class="material-symbols-rounded">check_circle</span>Безлимитные ИИ-маршруты</li>
+              <li><span class="material-symbols-rounded">check_circle</span>Поиск по фото локаций</li>
+              <li><span class="material-symbols-rounded">check_circle</span>Расширенные рекомендации</li>
+              <li><span class="material-symbols-rounded">check_circle</span>Приоритетная генерация</li>
+            </ul>
+            <a class="btn btn-primary" href="#download">Попробовать Pro</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-orbs" aria-hidden="true"><div class="orb orb-blue"></div><div class="orb orb-teal"></div></div>
+          <h2>Готовы к путешествию?</h2>
+          <p>Скачайте WayPoint AI и получите первый маршрут уже через минуту.</p>
+          <div class="cta-actions">
+            <a class="btn btn-white btn-lg" href="/downloads/waypoint-ai.apk" download>
+              <span class="material-symbols-rounded">android</span>
+              Скачать APK
+            </a>
+            <span class="cta-note">Android 8.0+ · iOS скоро</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark"><span class="material-symbols-rounded">distance</span></span>
+        <span class="logo-text">WayPoint <em>AI</em></span>
+      </a>
+      <p>© 2026 WayPoint AI · waypoint.crlx1q.com</p>
+      <div class="footer-links">
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="/admin">Админ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/landing.js"></script>
+</body>
+</html>
